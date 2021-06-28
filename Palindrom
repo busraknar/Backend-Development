@@ -1,0 +1,22 @@
+public class Palindrom {
+    static boolean isPalindrom(int sayi){
+        int geciciSayi, sonBasamak, tersSayi=0;
+        geciciSayi=sayi;
+        while(geciciSayi!=0) {
+            sonBasamak = geciciSayi % 10;
+            tersSayi = (tersSayi * 10) + sonBasamak;
+            geciciSayi /= 10;
+        }
+        if(geciciSayi==sayi)
+            return true;
+        else
+            return false;
+    }
+    public static void main(String[] args) {
+            System.out.println(isPalindrom(2167));
+        }
+
+    }
+
+
+}
